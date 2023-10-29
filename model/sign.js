@@ -57,6 +57,13 @@ export default class MysSign extends base {
 
         this.log = `[${name}uid:${uid}][qq:${_.padEnd(ck.qq, 10, ' ')}]`
 
+        if (uid.charAt(0) > 5) {
+            return {
+                retcode: 0,
+                msg: `\n${name}uid:${uid}，对不起，暂不支持国际服签到。`,
+            }
+        }
+        
         let isSigned = await redis.get(this.key)
         if (isSigned) {
             let reward = await this.getReward(isSigned, game)
