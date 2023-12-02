@@ -167,6 +167,23 @@ export default class MysApi {
           ...header1,
           'DS': (sign ? this.bbsDs(query, body) : this.SignDs(_bbs))
         }
+      case 'signgs':
+        return {
+          'x-rpc-app_version': '2.40.1',
+          'x-rpc-client_type': '5',
+          'x-rpc-device_id': this.device_id,
+          'User-Agent': `Mozilla/5.0 (Linux; Android 12; YZ-${this.device}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.73 Mobile Safari/537.36 miHoYoBBS/2.40.1`,
+          'X-Requested-With': 'com.mihoyo.hyperion',
+          'x-rpc-platform': 'android',
+          'x-rpc-device_model': 'Mi 10',
+          'x-rpc-device_name': this.device,
+          'x-rpc-channel': 'miyousheluodi',
+          'x-rpc-sys_version': '6.0.1',
+          'x-rpc-signgame': 'hk4e',
+          'Origin': 'https://act.mihoyo.com/',
+          'Referer': 'https://act.mihoyo.com/',
+          'DS': this.SignDs()
+        }
       case 'sign':
         return {
           ...header,
