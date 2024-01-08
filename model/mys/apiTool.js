@@ -30,7 +30,7 @@ export default class apiTool {
           }
         },
         validate: {
-          url: `http://api.rrocr.com/api/recognize.html`,
+          url: `http://api1.rrocr.com/api/recognize.html`,
           query: `appkey=${this.api.apikey}&gt=${data.gt}&challenge=${data.challenge}&referer=https://webstatic.mihoyo.com&ip=&host=`
         }
       },
