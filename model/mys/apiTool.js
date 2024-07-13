@@ -30,7 +30,7 @@ export default class apiTool {
           }
         },
         validate: {
-          url: `http://api.rrocr.com/api/recognize.html`,
+          url: `http://api1.rrocr.com/api/recognize.html`,
           query: `appkey=${this.api.apikey}&gt=${data.gt}&challenge=${data.challenge}&referer=https://webstatic.mihoyo.com&ip=&host=`
         }
       },
@@ -119,19 +119,19 @@ export default class apiTool {
           types: 'widget'
         },
         sign: {
-          url: `${hostList.host}event/bbs_sign_reward/sign`,
-          body: { act_id: 'e202009291139501', region: this.server, uid: this.uid },
-          types: 'sign'
+          url: `${hostList.host}event/luna/sign`,
+          body: { act_id: 'e202311201442471', region: this.server, uid: this.uid },
+          types: 'signgs'
         },
         sign_info: {
-          url: `${hostList.host}event/bbs_sign_reward/info`,
-          query: `act_id=e202009291139501&region=${this.server}&uid=${this.uid}`,
-          types: 'sign'
+          url: `${hostList.host}event/luna/info`,
+          query: `act_id=e202311201442471&region=${this.server}&uid=${this.uid}`,
+          types: 'signgs'
         },
         sign_home: {
-          url: `${hostList.host}event/bbs_sign_reward/home`,
-          query: `act_id=e202009291139501&region=${this.server}&uid=${this.uid}`,
-          types: 'sign'
+          url: `${hostList.host}event/luna/home`,
+          query: `act_id=e202311201442471&region=${this.server}&uid=${this.uid}`,
+          types: 'signgs'
         }
       },
       sr: {
