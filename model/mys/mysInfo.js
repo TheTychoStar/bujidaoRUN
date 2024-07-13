@@ -349,7 +349,7 @@ export default class MysInfo {
             logger.mark(`[公共ck失效][ltuid:${this.ckInfo.ltuid}]`)
             if (!isTask) this.e.reply('米游社查询失败，请稍后再试')
           }
-          if (!isTask) await this.delCk()
+          //if (!isTask) await this.delCk()
         } else {
           if (!isTask) this.e.reply(`米游社接口报错，暂时无法查询：${res.message}`)
         }
